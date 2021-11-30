@@ -5,7 +5,32 @@ on:
     branches:
       - master
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
+  test-aws:
+    name: test-build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+          role-session-name: github-actions_opendata-nginx
+          aws-region: eu-west-1
+
+      - name: login to AWS ECR
+        id: login
+        uses: aws-actions/amazon-ecr-login@v1
+
   test-build:
     name: test-build
     runs-on: ubuntu-latest
