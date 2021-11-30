@@ -5,17 +5,26 @@ on:
     tags:
       - v1.*
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   tag-image:
     name: tag-image
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
       - name: configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+          role-session-name: opendata-nginx
           aws-region: eu-west-1
 
       # NOTE: https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-retag.html
