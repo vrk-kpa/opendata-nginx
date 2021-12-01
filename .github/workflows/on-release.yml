@@ -5,15 +5,14 @@ on:
     tags:
       - v1.*
 
-permissions:
-  id-token: write
-  contents: read
-
 jobs:
   tag-image:
     name: tag-image
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - name: checkout
         uses: actions/checkout@v2
