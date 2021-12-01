@@ -1,9 +1,9 @@
 name: Tag build artifacts with released version
 
 on:
-  push:
-    tags:
-      - "*"
+  release:
+    types:
+      - published
 
 jobs:
   tag-image:
