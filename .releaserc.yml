@@ -7,6 +7,12 @@ plugins:
   - "@semantic-release/commit-analyzer"
   - "@semantic-release/release-notes-generator"
   - "@semantic-release/github"
+  - "@semantic-release/changelog"
+  - "@semantic-release/git"
+prepare:
+  - path: "@semantic-release/git"
+  - path: "@semantic-release/changelog"
+    changelogFile: "docs/CHANGELOG.md"
 dryRun: false
 ci: true
 debug: false
