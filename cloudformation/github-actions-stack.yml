@@ -44,6 +44,13 @@ Resources:
               StringLike:
                 token.actions.githubusercontent.com:sub: !Sub repo:${GitHubOrgName}/${GitHubRepositoryName}:*
       Policies:
+        - PolicyName: ecr-login
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: "ecr:GetAuthorizationToken"
+                Resource: "*"
         - PolicyName: ecr-access
           PolicyDocument:
             Version: "2012-10-17"
