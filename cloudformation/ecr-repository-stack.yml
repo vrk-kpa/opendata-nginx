@@ -3,7 +3,7 @@ AWSTemplateFormatVersion: "2010-09-09"
 Description: Creates ECR repository.
 
 Parameters:
-  Repository:
+  RepositoryName:
     Description: Name for the ECR repository.
     Type: String
 
@@ -16,8 +16,4 @@ Resources:
       ImageScanningConfiguration:
         ScanOnPush: true
       ImageTagMutability: MUTABLE
-      RepositoryName: !Ref Repository
-
-Outputs:
-  Role:
-    Value: !GetAtt Role.Arn 
+      RepositoryName: !Ref RepositoryName

@@ -7,10 +7,10 @@ Description: Creates OIDC provider and IAM role for GitHub actions workflows.
 #
 
 Parameters:
-  GitHubOrg:
+  GitHubOrgName:
     Description: Name for the GitHub organization.
     Type: String
-  GitHubRepository:
+  GitHubRepositoryName:
     Description: Name for the GitHub repository.
     Type: String
   OIDCProviderArn:
@@ -30,6 +30,7 @@ Resources:
   Role:
     Type: AWS::IAM::Role
     Properties:
+      Description: Role for GitHub actions workflow.
       AssumeRolePolicyDocument:
         Statement:
           - Effect: Allow
@@ -41,7 +42,7 @@ Resources:
                 - !Ref OIDCProviderArn
             Condition:
               StringLike:
-                token.actions.githubusercontent.com:sub: !Sub repo:${GitHubOrg}/${GitHubRepository}:*
+                token.actions.githubusercontent.com:sub: !Sub repo:${GitHubOrgName}/${GitHubRepositoryName}:*
       Policies:
         - PolicyName: ecr-access
           PolicyDocument:
