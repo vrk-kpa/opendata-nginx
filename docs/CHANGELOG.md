@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/vrk-kpa/opendata-nginx/compare/v1.0.0...v1.0.1) (2021-12-28)
+
+
+### Bug Fixes
+
+* remove unnecessary temp symlink from Dockerfile ([735d27d](https://github.com/vrk-kpa/opendata-nginx/commit/735d27d19a07d8e16a6de6c4ef52938f32c6c2b0))
+
 # 1.0.0 (2021-12-01)
 
 
