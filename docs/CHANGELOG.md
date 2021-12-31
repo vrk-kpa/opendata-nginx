@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/vrk-kpa/opendata-nginx/compare/v1.0.2...v1.0.3) (2021-12-31)
+
+
+### Bug Fixes
+
+* **ci:** add missing permissions for release job ([92d26d6](https://github.com/vrk-kpa/opendata-nginx/commit/92d26d6879a9a0b3f10ec047d07236876ea367a5))
+* **ci:** correct contents permissions for release job ([7c60d22](https://github.com/vrk-kpa/opendata-nginx/commit/7c60d223617d930be47e1d2d6cc7e11e6a4188bb))
+* **ci:** simplify release job to mitigate random AWS OIDC problems ([cc515db](https://github.com/vrk-kpa/opendata-nginx/commit/cc515dbe7026193338c517d070c52c09b0530844))
+
 ## [1.0.2](https://github.com/vrk-kpa/opendata-nginx/compare/v1.0.1...v1.0.2) (2021-12-31)
 
 
