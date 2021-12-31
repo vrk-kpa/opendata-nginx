@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/vrk-kpa/opendata-nginx/compare/v1.0.1...v1.0.2) (2021-12-31)
+
+
+### Bug Fixes
+
+* **AV-1569:** add jinja2 templates support, adjust log format, refactor project ([64c2f93](https://github.com/vrk-kpa/opendata-nginx/commit/64c2f932635b6041e2c37156a2743df2589a80ca))
+
 ## [1.0.1](https://github.com/vrk-kpa/opendata-nginx/compare/v1.0.0...v1.0.1) (2021-12-28)
 
 
