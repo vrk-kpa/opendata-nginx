@@ -53,6 +53,9 @@ jobs:
       group: ${{ github.ref }}/release
     needs:
       - build
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - name: checkout
         uses: actions/checkout@v2
