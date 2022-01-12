@@ -33,6 +33,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-buildx-
 
+      - name: login to DynaTrace Registry
+        id: login-dtr
+        uses: docker/login-action@v1 
+        with:
+          registry: ${{ secrets.DYNATRACE_USERNAME }}.live.dynatrace.com
+          username: ${{ secrets.DYNATRACE_USERNAME }}
+          password: ${{ secrets.DYNATRACE_TOKEN }}
+
       - name: build docker image
         uses: docker/build-push-action@v2
         with:
@@ -40,6 +48,17 @@ jobs:
           push: false
           tags: opendata/nginx:latest
           outputs: type=docker,dest=/tmp/opendata-nginx-latest.tar
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
+
+      - name: build docker image (dynatrace)
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: false
+          tags: opendata/nginx:latest-dynatrace
+          build-args: |
+            DYNATRACE_ENABLED=1
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
       
