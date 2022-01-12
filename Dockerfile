@@ -1,3 +1,6 @@
+# build args
+ARG DYNATRACE_ENABLED=0
+
 FROM nginx:1.21-alpine
 
 # install pkgs
@@ -15,3 +18,25 @@ RUN chmod +x /docker-entrypoint.d/*.sh
 
 # install www directory
 COPY nginx/www /var/www/
+
+#
+# Production stage, dynatrace enabled
+#
+FROM nginx_build AS production-dynatrace-1
+
+# install dynatrace oneagent
+# https://www.dynatrace.com/support/help/setup-and-configuration/setup-on-cloud-platforms/amazon-web-services/deploy-oneagent-on-aws-fargate
+COPY --from=ayv41550.live.dynatrace.com/linux/oneagent-codemodules-musl:nginx / /
+ENV LD_PRELOAD /opt/dynatrace/oneagent/agent/lib64/liboneagentproc.so
+
+#
+# Production stage, dynatrace disabled
+#
+FROM nginx_build AS production-dynatrace-0
+
+# do nothing :^)
+
+#
+# Production image
+#
+FROM production-dynatrace-${DYNATRACE_ENABLED} AS production
