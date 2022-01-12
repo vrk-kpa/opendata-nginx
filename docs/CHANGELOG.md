@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/vrk-kpa/opendata-nginx/compare/v1.0.3...v1.1.0) (2022-01-12)
+
+
+### Bug Fixes
+
+* add name for nginx main build stage ([398405e](https://github.com/vrk-kpa/opendata-nginx/commit/398405effa3d0e89398ddc2dc82233b60f675d3c))
+* do not cache dynatrace enabled image in test workflow ([e7895da](https://github.com/vrk-kpa/opendata-nginx/commit/e7895daba7089ba7f4883146880f003a377bf80d))
+
+
+### Features
+
+* add optional integration to dynatrace ([5dfece4](https://github.com/vrk-kpa/opendata-nginx/commit/5dfece4373fe3b921a55825799c19617c1bf0172))
+
 ## [1.0.3](https://github.com/vrk-kpa/opendata-nginx/compare/v1.0.2...v1.0.3) (2021-12-31)
 
 
