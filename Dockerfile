@@ -1,7 +1,7 @@
 # build args
 ARG DYNATRACE_ENABLED=0
 
-FROM nginx:1.21-alpine
+FROM nginx:1.21-alpine AS nginx_build
 
 # install pkgs
 RUN apk add --update-cache python3 py3-pip && \
