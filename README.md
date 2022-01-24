@@ -24,6 +24,8 @@ NGINX docker image for open data portal (avoindata.fi).
 | NAMESERVER | site.conf | `resolver` | - |
 | DOMAIN_NAME | site.conf | `server_name` | - |
 | SECONDARY_DOMAIN_NAME | site.conf | `server_name` | - |
+| BASE_DOMAIN_NAME | site.conf | `server_name` | - |
+| SECONDARY_BASE_DOMAIN_NAME | site.conf | `server_name` | - |
 | CKAN_HOST | server.conf | `$ckan_target` | - |
 | CKAN_PORT | server.conf | `$ckan_target` | - |
 | DRUPAL_HOST | server.conf | `$drupal_target` | - |

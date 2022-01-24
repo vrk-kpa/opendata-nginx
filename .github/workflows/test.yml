@@ -114,7 +114,9 @@ jobs:
             -e NAMESERVER=8.8.8.8 \
             -e NGINX_PORT=80 \
             -e DOMAIN_NAME=localhost \
-            -e SECONDARY_DOMAIN_NAME=hostlocal \
+            -e SECONDARY_DOMAIN_NAME=nginx \
+            -e BASE_DOMAIN_NAME=localhost.test \
+            -e SECONDARY_BASE_DOMAIN_NAME=nginx.test \
             -e CKAN_HOST=ckan \
             -e CKAN_PORT=5000 \
             -e DRUPAL_HOST=drupal \
