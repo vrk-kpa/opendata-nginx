@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/vrk-kpa/opendata-nginx/compare/v1.1.0...v1.1.1) (2022-01-24)
+
+
+### Bug Fixes
+
+* **AV-1613:** add 301 redirect rule from base domain ([b3a8c9c](https://github.com/vrk-kpa/opendata-nginx/commit/b3a8c9c1ce0d7e462affe30f2ee4b42cf9b54da9))
+
 # [1.1.0](https://github.com/vrk-kpa/opendata-nginx/compare/v1.0.3...v1.1.0) (2022-01-12)
 
 
