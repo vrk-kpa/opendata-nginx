@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/vrk-kpa/opendata-nginx/compare/v1.2.0...v1.2.1) (2022-01-25)
+
+
+### Bug Fixes
+
+* **AV-1614:** correct /health and ckan -> drupal rewrite location regexes ([157e792](https://github.com/vrk-kpa/opendata-nginx/commit/157e7929909093a7bd7272b6ef3f3409bab111d4))
+
 # [1.2.0](https://github.com/vrk-kpa/opendata-nginx/compare/v1.1.1...v1.2.0) (2022-01-25)
 
 
