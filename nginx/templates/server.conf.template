@@ -53,6 +53,10 @@ location = /robots.txt {
   access_log off;
 }
 
+location ^~ /ns {
+  alias /var/www/ns;
+}
+
 # ckan upstream target, re-evaluates DNS properly
 set $ckan_target "${CKAN_HOST}:${CKAN_PORT}";
 
