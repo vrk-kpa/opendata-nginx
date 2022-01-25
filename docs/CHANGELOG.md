@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/vrk-kpa/opendata-nginx/compare/v1.1.1...v1.2.0) (2022-01-25)
+
+
+### Bug Fixes
+
+* **AV-1614:** correct /ns location regex ([e3b79ff](https://github.com/vrk-kpa/opendata-nginx/commit/e3b79ff3473c9f47482fa68b45a0bb4bc0fab5b0))
+
+
+### Features
+
+* **AV-1614:** change drupal php-fpm proxy to http reverse proxy ([ea94b13](https://github.com/vrk-kpa/opendata-nginx/commit/ea94b1385e8aebbec2c5f01d8d0a10a1b0782671))
+
 ## [1.1.1](https://github.com/vrk-kpa/opendata-nginx/compare/v1.1.0...v1.1.1) (2022-01-24)
 
 
