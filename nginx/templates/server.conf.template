@@ -31,13 +31,13 @@ rewrite ^/data/?$ $real_scheme://$http_host/fi permanent;
 rewrite ^/data/(fi|en|en_GB|sv)/?$ $real_scheme://$http_host/$1 permanent;
 
 # disable ckan login/register/logout, redirect to drupal
-location /data/user/login {
+location ^~ /data/user/login {
   rewrite ^/.* $real_scheme://$http_host/user/login permanent;
 }
-location /data/user/register {
+location ^~ /data/user/register {
   rewrite ^/.* $real_scheme://$http_host/user/register permanent;
 }
-location /data/user/_logout {
+location ^~ /data/user/_logout {
   rewrite ^/.* $real_scheme://$http_host/user/logout permanent;
 }
 
