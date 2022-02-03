@@ -105,7 +105,7 @@ jobs:
         run: |
           docker run --name validate \
             -e NGINX_ROOT=/var/www/html \
-            -e NGINX_MAX_BODY_SIZE=16M \
+            -e NGINX_MAX_BODY_SIZE=5000M \
             -e NGINX_EXPIRES=1h \
             -e NGINX_CSP_DEFAULT_SRC="" \
             -e NGINX_CSP_SCRIPT_SRC="" \
