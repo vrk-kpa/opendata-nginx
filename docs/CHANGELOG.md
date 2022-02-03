@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/vrk-kpa/opendata-nginx/compare/v1.2.1...v1.2.2) (2022-02-03)
+
+
+### Bug Fixes
+
+* Set max resource size to previous 5GB ([ef683e0](https://github.com/vrk-kpa/opendata-nginx/commit/ef683e04d95a54b8e0bc049fa35b271c1049afb0))
+
 ## [1.2.1](https://github.com/vrk-kpa/opendata-nginx/compare/v1.2.0...v1.2.1) (2022-01-25)
 
 
