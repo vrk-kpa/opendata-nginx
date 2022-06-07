@@ -62,7 +62,7 @@ set $ckan_target "${CKAN_HOST}:${CKAN_PORT}";
 
 # ckan at /data/
 location ~ ^/data/(.*)$ {
-  proxy_pass http://$ckan_target/$1$is_args$args;
+  proxy_pass http://$ckan_target/data/$1$is_args$args;
 
   # common security headers
   include /etc/nginx/conf.d/security_headers.conf;
@@ -88,13 +88,13 @@ location ~ ^/data/(.*)$ {
   }
 
   location ~ /data/(fi|en_GB|sv)/organization/(.*)/embed {
-    proxy_pass http://$ckan_target/$1/organization/$2/embed$is_args$args;
+    proxy_pass http://$ckan_target/data/$1/organization/$2/embed$is_args$args;
 
     add_header Bypass-Sameorigin-Policy 1;
   }
 
   location ~ /data/(fi/|en_GB/|sv/)?(api/)(.*) {
-    proxy_pass http://$ckan_target/$1$2$3$is_args$args;
+    proxy_pass http://$ckan_target/data/$1$2$3$is_args$args;
 
     proxy_no_cache 1;
     proxy_cache_bypass 1;
