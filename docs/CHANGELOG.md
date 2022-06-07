@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/vrk-kpa/opendata-nginx/compare/v1.2.2...v1.2.3) (2022-06-07)
+
+
+### Bug Fixes
+
+* **AV-1670:** Move ckan to data path ([939ee82](https://github.com/vrk-kpa/opendata-nginx/commit/939ee82730b461f398d9f54f4e01414e79f9c60b))
+
 ## [1.2.2](https://github.com/vrk-kpa/opendata-nginx/compare/v1.2.1...v1.2.2) (2022-02-03)
 
 
